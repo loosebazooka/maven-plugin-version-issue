@@ -1,6 +1,6 @@
 // define all versioned plugins here and apply in subprojects as necessary without version
 plugins {
-  id 'io.freefair.maven-plugin' version '3.6.1' apply false
+  id 'io.freefair.maven-plugin' version '3.8.0' apply false
 }
 
 subprojects {
