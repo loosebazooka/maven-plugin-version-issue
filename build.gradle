@@ -1,0 +1,25 @@
+// define all versioned plugins here and apply in subprojects as necessary without version
+plugins {
+  id 'io.freefair.maven-plugin' version '3.6.1' apply false
+}
+
+subprojects {
+  group 'com.loosebazooka.test'
+
+  repositories {
+    mavenCentral()
+  }
+
+  apply plugin: 'java'
+  apply plugin: 'maven-publish'
+
+  sourceCompatibility = JavaVersion.VERSION_1_8
+  targetCompatibility = JavaVersion.VERSION_1_8
+  compileJava.options.encoding = 'UTF-8'
+
+  dependencies {
+    constraints {
+      implementation 'com.google.guava:guava:27.0.1-jre'
+    }
+  }
+}
